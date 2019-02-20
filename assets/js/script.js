@@ -6,7 +6,7 @@ var foodie,drinks;
 var drinkTokens=3,foodTokens=3;
 
 
-foodie = ["Space Döner Kebab", "Flying Schnitzel", "3D printed Pizza Hawa", "Magic Bitterballen"]
+foodie = ["Space Döner Kebab", "Flying Schnitzel", "3D printed Pizza Hawaii", "Magic Bitterballen"]
 drinks = ["Ayran Mango", "Club Mate", "Tomato juice"]
 var infobox = document.getElementsByClassName("infobox user");
 
