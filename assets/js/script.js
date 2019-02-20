@@ -3,36 +3,64 @@ var startDate = new Date("Oct 12, 2018 15:37:25");
 var impactDate = new Date("Mar 10, 2019 15:37:25");
 var durationTime = 149;
 var foodie,drinks;
-foodie = ["Space Döner Kebab", "Flying Schnitzel", "3D printed Pizza", "Magic Bitterballen"]
+var drinkTokens=3,foodTokens=3;
+
+
+foodie = ["Space Döner Kebab", "Flying Schnitzel", "3D printed Pizza Hawaii", "Magic Bitterballen"]
 drinks = ["Ayran Mango", "Club Mate", "Tomato juice"]
 var infobox = document.getElementsByClassName("infobox user");
 
+var currentDrink=randomarray(drinks), currentFood=randomarray(foodie)
+
+function updatespacecraftvalues() {
 
 
-var currentDrink = randomarray(drinks);
-var currentFood = randomarray(foodie);
-updatedrinks()
-updatefood()
+    if (drinkTokens >=1){
 
-// Intervals
+        document.querySelector(".value_drinks").innerText = currentDrink;
+        document.querySelector(".value_drinktokens").innerText = drinkTokens;
+        buttonlistener(".cta.drinks",deliverypopup,currentDrink);
+
+    }
+    
+    if (foodTokens >=1){
+        document.querySelector(".value_foodie").innerText = currentFood;
+        document.querySelector(".value_foodtokens").innerText = foodTokens;
+        buttonlistener(".cta.foodie",deliverypopup,currentFood);
+    }
+    
+    
+
+}
+
+updatespacecraftvalues();
+
+
+
+
+// Intervals for updating values
 var fuelInterval = setInterval(updatefuel, 100);
 var thrInterval = setInterval(updatethrottle, 1000);
 var speedInterval = setInterval(updatespeed, 1000);
 var gforceInterval = setInterval(updategforce, 1000);
 var countownInterval = setInterval(updatecountdown, 1000);
-var foodInterval = setInterval(updatefood, 1000);
 
 // Constants
 
 
 
 function updatedrinks() { 
-    randomarray(drinks)
-    document.querySelector(".value_drinks").innerText = currentDrink;
+    currentDrink=randomarray(drinks);
+    drinkTokens-=1;
+    checktokens();
+    updatespacecraftvalues();
 }
 function updatefood() { 
-    randomarray(foodie)
-    document.querySelector(".value_foodie").innerText = currentFood;
+    currentFood=randomarray(foodie);
+    foodTokens-=1;
+    checktokens();
+    updatespacecraftvalues();
+
 }
 
 
@@ -91,27 +119,69 @@ function randomarray(arrayName) {
 
 
 
-document.querySelector(".cta.drinks").addEventListener("click", function(){
-    alert("Jouw frisdrankje "+ currentDrink +" is onderweg");
-    updatedrinks();
 
-});
+function checktokens(){
+    if(drinkTokens==0) {
+        document.querySelector(".cta.drinks").remove();
+        document.querySelector(".infopane.drinks").innerHTML = '<span style="color:#ff0000;font-size: 1.2em;">Je hebt niets meer te drinken.</span>';
+
+    } 
+
+    if(foodTokens==0) {
+        document.querySelector(".cta.foodie").remove();
+        document.querySelector(".infopane.food").innerHTML = '<span  style="color:#ff0000;font-size: 1.2em;">Je hebt niets meer te eten.</span>';
+
+    }
+
+}
 
 
-
-document.querySelector(".cta.foodie").addEventListener("click", function(){
+function buttonlistener(cssSelector,callFunction,functionArgument) {
+    document.querySelector(cssSelector).addEventListener("click", function(){
     
+        callFunction(functionArgument);
+    
+    });
+}
+
+
+
+function closeinfobubble(functionFollowup) {
+
+   document.querySelector(".infobubble").remove()
+   functionFollowup();
+
+}
+
+
+// Delivery popup function for both food and drinks (inject via. property)
+function deliverypopup(foodName,foodCategoryName){
+    
+    if(foodName==currentDrink){
+        foodCategoryName = "frisdrankje";
+    }else foodCategoryName = "etentje";
+
     const INFOBOX = document.querySelector("div.infobox.user");
-    
-    INFOBOX.innerHTML += '<div class="infobubble"><p><p>Jouw '+ currentFood +' is onderweg</p></p><div class="cta dismiss"><a href="#">ok cool</a></div></div>';
-
-    updatefood();
-
-});
-
-document.querySelector(".cta.dismiss").addEventListener("click", function(){
+    INFOBOX.innerHTML += '<div class="infobubble"><p><p>Jouw '+ foodCategoryName + " "  + '<b>"' +foodName+ '</b>"' +' is onderweg</p></p><div class="cta dismiss"><a href="#">ok cool</a></div></div>';
 
 
-    updatefood();
+    document.querySelector(".cta.dismiss").addEventListener("click", function(){
+
+        if (foodName==currentDrink ) {
+            closeinfobubble(updatedrinks);
+        }else if (foodName==currentFood ) {
+            closeinfobubble(updatefood);
+        }
+
+
+    });
+
+     
+
+}
+
+document.querySelector(".cta.exploremars").addEventListener("click", function(){
+    alert("Mars has nothing to offer yet");
+
 
 });

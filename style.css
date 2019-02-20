@@ -11,16 +11,10 @@ body {
 	margin: 0;
 	background-color: hsl(0, 0%, 95%);
 	background: url("assets/images/rocket.jpg");
-	background-repeat-x: fill;
-	background-size: cover;
+	backdrop-filter: blur(5px);
+	background-size: cover;	
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
 header,
 main,
 menu,
@@ -282,9 +276,9 @@ button,
 input,
 select,
 textarea {
-	font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
+	font-family: 'Inconsolata', monospace;
 	font-size: 18px;
-	line-height: 1.5;
+	line-height: 1.2;
 }
 
 h1,
@@ -297,46 +291,8 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
-}
-
-b,
-strong {
-	font-weight: bold;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	margin-bottom: 0em;
+	font-size: 1.3em;
 }
 
 abbr,
@@ -408,7 +364,6 @@ Header styles
 
 .masthead {
     padding: 1em 0;
-    /* background-color: #988f838c; */
 }
 
 @media screen and (min-width: 25em) {
@@ -427,9 +382,7 @@ Header styles
 Front page styles
 --------------------------------------------------------------*/
 
-.main-pitch {
-    background: white;
-}
+
 
 .featured-image {
 	margin: 2em auto;
@@ -452,7 +405,7 @@ Front page styles
 
 .dashboard {
     padding: 0 1em;
-    font-size: 1.2em;
+    /* font-size: 1.1em; */
 }
 
 .dashboard.column {
@@ -466,6 +419,12 @@ Front page styles
     width: 100%;
     padding: 10px;
     margin: 10px;
+    /* display: flex; */
+}
+
+.impactinfo {
+
+	text-align: center;
 }
 
 .icon {
@@ -480,20 +439,26 @@ Front page styles
 .infopane {
     border: white;
     border-radius: 1em;
+    background:;
     border-style: solid;
     margin: 5px;
     padding: 5px;
     text-align: center;
+    flex:1;
+    justify-content: baseline;
 }
 
 .infopanes {
     display: flex;
+    flex-direction:;
+    /* flex-direction: row-reverse; */
+    flex-direction: column;
 }
 
 
 .eta-counter {
     display: flex;
-    align-content: baseline;
+    align-content: baselin;
 }
 
 .eta-counter p {
@@ -517,8 +482,7 @@ Front page styles
 
 /* CTA */
 
-.cta {
-}
+.cta {margin-top: auto;}
 .cta-box {
     margin: 3em;
     text-align: center;
@@ -527,10 +491,12 @@ Front page styles
     padding: 0.25em 0.75em;
     font-size: 2em;
     font-weight: 900;
-    color: #FFFCED;
+    color: #ffffff;
     text-decoration: none;
-    border: 5px solid #FFFCED;
+    border: 5px solid #ffffff;
+    text-align:;
 }
+
 
 
 .cta.dismiss {
@@ -546,9 +512,12 @@ Front page styles
         border-width: 5px;
 	}
 	.infopane .cta a {
-		font-size: 12px;
+		font-size: 1em;
 		border-radius: 1em;
 		border-width: 3px;
+	}
+	.infopane .cta {
+		padding-bottom: 10px;
 	}
 
 }

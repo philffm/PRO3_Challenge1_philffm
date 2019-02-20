@@ -5,29 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Passenger Informatie: AMS - MARS</title>
-    <link rel="stylesheet" href="fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" >
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
     <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
-    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
 
     <header class="masthead clear">
         <div class="site-header centered">
-            <div class="site-branding">
+            <div class="spacex-branding">
                 <img src="assets/images/spacex_logo.png" alt="">
-            </div><!-- .site-title -->
+            </div>
            
-        </div><!-- .centered -->
+        </div>
 
-    </header><!-- .masthead -->
+    </header>
 
   
 
     <main class="main-area">
 
-        <div class="top-pitch centered">
+        <div class="top centered">
 
 
             <div class="dashboard column">
@@ -46,16 +46,18 @@
                 <div class="infobox journey">
                     <img src="assets/images/journeymap.png" alt="">
                     
-                    <h2>Time until impact</h2>
-                    <div class="eta-counter">
-                        <p><span class="value_days"></span> D</p>
-                        <p><span class="value_hours"></span> H</p>
-                        <p><span class="value_minutes"></span> M</p>
-                        <p><span class="value_secs"></span> S</p>
+                    
+                    <div class="impactinfo">
 
-
-
-                    </div>    
+                        <h2>Time until impact</h2>
+                            <div class="eta-counter">
+                                <p><span class="value_days"></span> D</p>
+                                <p><span class="value_hours"></span> H</p>
+                                <p><span class="value_minutes"></span> M</p>
+                                <p><span class="value_secs"></span> S</p>
+                            </div>
+                    
+                        </div>    
 
                 </div>
 
@@ -64,34 +66,45 @@
                             <img src="assets/images/bulb.png" alt="">
                         </div>
                         <div class="infopanes">
+                            <div class="remainingfood">
+                                <p> <span>You have</span> <span class="value_foodtokens">XXXXX</span> food tokens and <span class="value_drinktokens">XXXXX</span> drink tokens left. </p>
+    
+                            </div>
                             <div class="infopane food">
-                                    <p> <span> <b>Food:</b></span> <span class="value_foodie">XXXXX</p> </span></p>
-                                    <div class="cta drinks">
-                                            <a href="#">Give me drinks!</a>
+                                    <p> <span> <b>Food:</b><br></span> <span class="value_foodie">XXXXX</p> </span></p>
+                                    
+                                        <div class="cta foodie">
+                                            <a href="#">Give me food!</a>
                                         </div><!-- .cta -->
                                 
 
                             </div>
                             <div class="infopane drinks">
-                                    <p> <span> <b>Drinks:</b></span> <span class="value_drinks">XXXXX</p> </span></p>
-                                    <div class="cta foodie">
-                                            <a href="#">Give me food!</a>
-                                        </div><!-- .cta -->
+                                    <p> <span> <b>Drinks:</b><br></span> <span class="value_drinks">XXXXX</p> </span></p>
+                                    <div class="cta drinks">
+                                        <a href="#">Give me drinks!</a>
+                                    </div><!-- .cta -->
+
+                                    
                             </div>
 
                             
+
                         </div>
 
                     
                     </div>
             </div>
+
+            
                 <div>
-        </div><!-- .pitch centered -->
-        <div class="cta-box">
-            <div class="cta">
-                <a href="#">Show me what to do at MARS!</a>
-            </div><!-- .cta -->
-         </div>
+                        <div class="cta-box">
+                                <div class="cta exploremars">
+                                    <a href="#">Show me what to do at MARS!</a>
+                                </div><!-- .cta -->
+                             </div>
+                    
+        </div><!-- centered -->
 
        
     </main><!-- .main-area -->
