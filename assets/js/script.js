@@ -8,11 +8,16 @@ var drinkTokens=3,foodTokens=3;
 
 foodie = ["Space Döner Kebab", "Flying Schnitzel", "3D printed Pizza Hawaii", "Magic Bitterballen"]
 drinks = ["Ayran Mango", "Club Mate", "Tomato juice"]
+spaceships = ["Apollo 100", "Marshond 1100", "Spacecat 101"]
+dayaction = ["breakfast", "lunch", "dinner"]
+
+
 var infobox = document.getElementsByClassName("infobox user");
 
-var currentDrink=randomarray(drinks), currentFood=randomarray(foodie)
+var currentDrink=randomarray(drinks), currentFood=randomarray(foodie), spaceshipName=randomarray(spaceships), currentDayaction=randomarray(dayaction);
 
-function updatespacecraftvalues() {
+
+function updatespaceshipvalues() {
 
 
     if (drinkTokens >=1){
@@ -29,11 +34,14 @@ function updatespacecraftvalues() {
         buttonlistener(".cta.foodie",deliverypopup,currentFood);
     }
     
-    
+    document.querySelector(".value_spaceship").innerText = spaceshipName;
+    document.querySelector(".value_dayaction").innerText = currentDayaction;
+
+
 
 }
 
-updatespacecraftvalues();
+updatespaceshipvalues();
 
 
 
@@ -52,14 +60,30 @@ var countownInterval = setInterval(updatecountdown, 1000);
 function updatedrinks() { 
     currentDrink=randomarray(drinks);
     drinkTokens-=1;
+    if(drinkTokens==0){
+
+        currentDayaction="some sleep"
+        document.querySelector(".value_dayaction").innerText = currentDayaction;
+
+    }
+
+    updatespaceshipvalues();
     checktokens();
-    updatespacecraftvalues();
+
 }
 function updatefood() { 
     currentFood=randomarray(foodie);
     foodTokens-=1;
+    if(foodTokens==0){
+
+        currentDayaction="some sleep"
+        document.querySelector(".value_dayaction").innerText = currentDayaction;
+
+    }
+
+    updatespaceshipvalues();
     checktokens();
-    updatespacecraftvalues();
+
 
 }
 
@@ -133,6 +157,7 @@ function checktokens(){
 
     }
 
+    
 }
 
 

@@ -9,90 +9,36 @@ html {
 
 body {
 	margin: 0;
-	background-color: hsl(0, 0%, 95%);
-	background: url("assets/images/rocket.jpg");
-	backdrop-filter: blur(5px);
-	background-size: cover;	
+	background-size: auto;
+	background: url(assets/images/bg-looped.gif);
+	height: 100%;
+	line-height: 1.2;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 header,
 main,
-menu,
 nav,
-section,
-summary {
+section, {
 	display: block;
 }
 
-audio,
-canvas,
-progress,
-video {
-	display: inline-block;
-	vertical-align: baseline;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden],
-template {
-	display: none;
-}
-
-a {
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
-}
-
-abbr[title] {
-	border-bottom: 1px dotted;
-}
 
 b,
 strong {
 	font-weight: bold;
 }
 
-dfn {
-	font-style: italic;
-}
 
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
 
-mark {
-	background: #ff0;
-	color: #000;
-}
 
-small {
-	font-size: 80%;
-}
-
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
 
 img {
 	display: block;
@@ -101,156 +47,8 @@ img {
 	height: auto;
 }
 
-svg:not(:root) {
-	overflow: hidden;
-}
 
-figure {
-	margin: 0;
-}
 
-hr {
-	box-sizing: content-box;
-	height: 0;
-}
-
-pre {
-	overflow: auto;
-}
-
-code,
-kbd,
-pre,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-button {
-	overflow: visible;
-}
-
-button,
-select {
-	text-transform: none;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-}
-
-button[disabled],
-html input[disabled] {
-	cursor: default;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-input {
-	line-height: normal;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-input[type="search"] {
-	-webkit-appearance: textfield;
-	box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
-	padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-	border: 0;
-	padding: 0;
-
-}
-
-textarea {
-	overflow: auto;
-}
-
-optgroup {
-	font-weight: bold;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-td,
-th {
-	padding: 0;
-}
-
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
-}
 
 /*--------------------------------------------------------------
 Layouts
@@ -272,13 +70,9 @@ Typography
 --------------------------------------------------------------*/
 
 body,
-button,
-input,
-select,
 textarea {
 	font-family: 'Inconsolata', monospace;
 	font-size: 18px;
-	line-height: 1.2;
 }
 
 h1,
@@ -288,76 +82,21 @@ h4,
 h5,
 h6 {
 	clear: both;
+	color:white;
+	font-style:;
 }
 
 p {
 	margin-bottom: 0em;
 	font-size: 1.3em;
+	color: #FFFF;
 }
 
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
 
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
 
-sup,
-sub {
-	font-size: 75%;
-	height: 0;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	bottom: 1ex;
-}
-
-sub {
-	top: .5ex;
-}
-
-small {
-	font-size: 75%;
-}
-
-big {
-	font-size: 125%;
-}
-
-/* Global layouts */
-@media screen and (min-width: 700px) {
-    .three-column {
-        column-count: 3;
-        column-gap: 2.4em;
-    }
-}
 
 /* Global buttons */
-.content-button {
-	padding: .5em 1em;
-	border: 3px solid #B51C35;
-	/*border-radius: 10px;*/
-	font-weight: 600;
-}
 
-a.content-button {
-	color: black;
-	text-decoration: none;
-}
-
-a.content-button:focus,
-a.content-button:hover {
-	background: #B51C35;
-	color: #FFFCED;
-}
 /*--------------------------------------------------------------
 Header styles
 --------------------------------------------------------------*/
@@ -413,16 +152,16 @@ Front page styles
 }
 
 .infobox {
-    border: black;
+    border: #ffffff;
     border-style: solid;
+    background:rgba(0, 0, 0, 0.466);
     border-radius: 1em;
     width: 100%;
     padding: 10px;
     margin: 10px;
-    /* display: flex; */
 }
 
-.impactinfo {
+.impactinfo,.locationinfo,.timeinfo {
 
 	text-align: center;
 }
@@ -464,7 +203,7 @@ Front page styles
 .eta-counter p {
     /* border: aqua; */
     border-style: solid;
-    margin: 9px;
+    margin: 7px;
     padding: 5px;
     color: white;
     background: black;
