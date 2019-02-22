@@ -1,6 +1,4 @@
-/*--------------------------------------------------------------
-CSS Reset
---------------------------------------------------------------*/
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -22,7 +20,7 @@ body {
 header,
 main,
 nav,
-section, {
+section {
 	display: block;
 }
 
@@ -77,13 +75,15 @@ textarea {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3
+{
 	clear: both;
 	color:white;
 	font-style:;
+}
+
+h2 {
+    text-decoration: underline;
 }
 
 p {
@@ -95,7 +95,6 @@ p {
 
 
 
-/* Global buttons */
 
 /*--------------------------------------------------------------
 Header styles
@@ -121,30 +120,8 @@ Header styles
 Front page styles
 --------------------------------------------------------------*/
 
-
-
-.featured-image {
-	margin: 2em auto;
-	width: 70%;
-}
-
-.featured-image figcaption {
-	margin-top: 1em;
-	padding-right: 30%;
-	padding-left: 1em;
-	font-style: italic;
-
-	color: grey;
-	border-left: 2px solid grey;
-}
-.main-title {
-    font-size: 2.2em;
-    text-align: center;
-}
-
 .dashboard {
     padding: 0 1em;
-    /* font-size: 1.1em; */
 }
 
 .dashboard.column {
@@ -219,7 +196,7 @@ Front page styles
     padding: 5px;
 }
 
-/* CTA */
+/* CTA / Buttons */
 
 .cta {margin-top: auto;}
 .cta-box {
