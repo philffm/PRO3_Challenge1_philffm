@@ -25,17 +25,6 @@ section {
 }
 
 
-b,
-strong {
-	font-weight: bold;
-}
-
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
 
 
 img {
@@ -71,6 +60,17 @@ body,
 textarea {
 	font-family: 'Inconsolata', monospace;
 	font-size: 18px;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 h1,
